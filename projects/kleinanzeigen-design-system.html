@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kleinanzeigen Design System — Yaara Zuckerwar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <a href="../index.html" class="nav-logo" aria-label="Yaara — Home">Yaara</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../index.html#experience">Experience</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../cv.pdf" target="_blank" rel="noopener">CV</a></li>
+    <li><a href="https://www.linkedin.com/in/yaaras/" target="_blank" rel="noopener" class="nav-cta">Connect</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div class="project-back">
+    <a href="../index.html#work" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      All work
+    </a>
+  </div>
+
+  <div class="project-hero">
+    <span class="project-hero-tag">Design System · Kleinanzeigen · 2024</span>
+    <h1 class="project-hero-title">Scaling a Multi-Platform Design System for Millions of Users</h1>
+  </div>
+
+  <div class="project-content">
+    <div class="project-layout">
+
+      <div class="project-figures reveal">
+        <figure>
+          <div class="project-figure-placeholder" style="background:radial-gradient(ellipse at 70% 30%, #1f1a2e 0%, #0a0814 100%); height:480px;"></div>
+        </figure>
+        <figure>
+          <div class="project-figure-placeholder" style="background:radial-gradient(ellipse at 30% 70%, #1a1626 0%, #08040f 100%); height:480px;"></div>
+          <figcaption>Component anatomy — every spec includes structure, states, token mapping, and usage guidance</figcaption>
+        </figure>
+        <figure>
+          <div class="project-figure-placeholder" style="background:radial-gradient(ellipse at 50% 50%, #14111e 0%, #070510 100%); height:320px;"></div>
+          <figcaption>Dark mode and accessibility guidelines are always part of the component's specs</figcaption>
+        </figure>
+      </div>
+
+      <aside class="project-sidebar reveal reveal-delay-1">
+        <div class="project-prose">
+
+          <h2>Context</h2>
+          <p>Design systems are not just UI libraries — they are a way to align teams, reduce friction, and improve how product decisions scale. At Kleinanzeigen, I work on the design system as the shared foundation for consistent, scalable, accessible product experiences across Android, iOS, and web — used by multiple product squads shipping in parallel.</p>
+
+          <h2>The challenge</h2>
+          <p>When I joined, the system had grown organically alongside the product. Components existed in multiple versions across platforms, token naming was inconsistent, dark mode coverage was incomplete, and there was no clear model for how teams should contribute or when they should deviate.</p>
+          <p>The deeper problem wasn't missing components — it was that there was no operating model. No agreed process for deciding what goes into the system, who reviews it, or how platform-specific needs get resolved without creating new fragmentation.</p>
+
+          <h2>My role</h2>
+          <p>Senior Design Ops / Design System Designer. Working across three things simultaneously: evolving the component library, restructuring the token architecture, and building the governance and contribution processes that give the system longevity.</p>
+
+          <h2>What I drove</h2>
+          <ul>
+            <li><strong>Token architecture</strong> — Restructured the token layer into semantic, tier-based naming that maps cleanly to both Figma variables and code.</li>
+            <li><strong>Component specs</strong> — Established a documentation standard: every component ships with full anatomy, state coverage, dark mode specs, accessibility requirements, and usage guidance.</li>
+            <li><strong>Dark mode &amp; accessibility</strong> — Moved both from afterthought to first-class requirement in the contribution process.</li>
+            <li><strong>Contribution model</strong> — Built a lightweight governance process for product teams to propose, review, and graduate components.</li>
+            <li><strong>Design–engineering alignment</strong> — Established regular syncs with front-end leads and a shared decision log for non-obvious choices.</li>
+          </ul>
+
+          <h2>Reflection</h2>
+          <p>The hardest part of design systems work is not designing the components — it's designing the system around the system: the naming conventions, the decision-making process, the documentation culture, the way you handle disagreement between platform teams. The components are visible. The infrastructure that keeps them consistent is not, and that's where most of the long-term leverage lives.</p>
+
+        </div>
+
+        <footer class="project-meta">
+          <dl>
+            <dt>Year</dt><dd>2024</dd>
+            <dt>Client</dt><dd>Kleinanzeigen</dd>
+            <dt>Role</dt><dd>Senior Design Ops</dd>
+            <dt>Platforms</dt><dd>Android, iOS, Web</dd>
+            <dt>Type</dt><dd><span class="tag-badge">Design System</span></dd>
+          </dl>
+        </footer>
+      </aside>
+
+    </div>
+  </div>
+
+  <div class="more-work">
+    <p class="section-label">More work</p>
+    <div class="projects-grid">
+      <div class="project-card project-card--third reveal" data-tags="product-design">
+        <div class="card-inner"><a href="amicable-solutions.html"><div class="card-bg card-pattern-1"></div><div class="card-overlay"></div><div class="card-content"><div class="card-tag">Product Design</div><h3 class="card-title">Amicable Solutions</h3><span class="card-arrow">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></div></a></div>
+      </div>
+      <div class="project-card project-card--third reveal reveal-delay-1" data-tags="design-system">
+        <div class="card-inner"><a href="xing-design-system.html"><div class="card-bg card-pattern-4"></div><div class="card-overlay"></div><div class="card-content"><div class="card-tag">Design System</div><h3 class="card-title">XING Design System</h3><span class="card-arrow">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></div></a></div>
+      </div>
+      <div class="project-card project-card--third reveal reveal-delay-2" data-tags="product-design">
+        <div class="card-inner"><a href="transactions-overview.html"><div class="card-bg card-pattern-3"></div><div class="card-overlay"></div><div class="card-content"><div class="card-tag">Product Design</div><h3 class="card-title">Transactions Overview</h3><span class="card-arrow">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></div></a></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">© 2026 Yaara Zuckerwar</span>
+  <ul class="footer-links">
+    <li><a href="../index.html">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="https://www.linkedin.com/in/yaaras/" target="_blank" rel="noopener">LinkedIn</a></li>
+  </ul>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
