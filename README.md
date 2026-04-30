@@ -1,4 +1,4 @@
-# Yaara Zuckerwar — Portfolio
+# Portfolio testing playground
 
 Personal portfolio site for Yaara Zuckerwar, Design Systems & Product Designer.
 
