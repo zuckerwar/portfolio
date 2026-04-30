@@ -496,6 +496,12 @@ body::before {
   transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
 }
 
+img.card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .project-card:hover .card-bg { transform: scale(1.04); }
 
 .card-overlay {
@@ -531,10 +537,9 @@ body::before {
 }
 
 .card-title {
-  font-family: var(--editorial);
+  font-family: var(--sans);
   font-size: 2.4rem;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 500;
   line-height: 1.2;
   color: var(--text);
   margin-bottom: 1.2rem;
@@ -800,16 +805,11 @@ body::before {
 
 .project-figures figure:last-child { margin-bottom: 0; }
 
-.project-figure-placeholder {
+.project-figures img {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.1);
+  display: block;
+  object-fit: cover;
+  min-height: 32rem;
 }
 
 .project-figures figcaption {
