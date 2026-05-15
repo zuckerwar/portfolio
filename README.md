@@ -1,65 +1,91 @@
-# Portfolio testing playground
+# Yaara Zuckerwar — Portfolio
 
-Personal portfolio site for Yaara Zuckerwar, Design Systems & Product Designer.
+Personal portfolio. No framework, no build step, no CMS. Plain HTML + CSS + vanilla JS, deployable directly to GitHub Pages.
 
-## Structure
+## Deploy to GitHub Pages
+
+1. Create a new repository on GitHub
+2. Push this folder to the `main` branch:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git push -u origin main
+   ```
+3. Go to **Settings → Pages**
+4. Set source to **Deploy from a branch** → `main` → `/ (root)`
+5. Save — live at `https://YOUR_USERNAME.github.io/YOUR_REPO/` within a minute
+
+**Custom domain** (e.g. `yaara.design`): add a `CNAME` file to the repo root containing just the domain name, then point your DNS to GitHub Pages per the [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+
+## Project structure
 
 ```
 /
-├── index.html              # Homepage (hero, work grid, experience, capabilities)
-├── about.html              # About page
+├── index.html          # Home — project grid
+├── about.html          # About page
 ├── css/
-│   └── style.css           # All styles
+│   ├── tokens.css      # Design tokens (colors, spacing, typography)
+│   └── main.css        # All styles
 ├── js/
-│   └── main.js             # Cursor, scroll reveal, filter, card tilt
-└── projects/
-    ├── amicable-solutions.html
-    ├── kleinanzeigen-design-system.html
-    ├── transactions-overview.html
-    ├── xing-design-system.html
-    ├── xing-settings.html
-    ├── google-snapseed.html
-    ├── deutsche-bank.html
-    └── motion.html
+│   ├── projects.js     # All project data — edit this to update content
+│   ├── main.js         # Card rendering, project panel open/close
+│   ├── project.js      # Theme toggle
+│   ├── cursor.js       # Custom cursor
+│   └── transitions.js  # Page transitions
+└── images/             # Cover images and case study assets
 ```
 
-## Deploying to GitHub Pages
+## Updating content
 
-1. Create a new GitHub repository (e.g. `yaara-portfolio` or `yourusername.github.io`)
-2. Push the contents of this folder to the `main` branch:
+All project content lives in `js/projects.js`. Each project is a plain JS object — edit fields directly. Changes take effect immediately on reload, no build needed.
 
-```bash
-git init
-git add .
-git commit -m "Initial portfolio deploy"
-git remote add origin https://github.com/yourusername/your-repo-name.git
-git push -u origin main
+### Add or edit a project
+
+```js
+{
+  id: "unique-slug",
+  title: "Project Title",
+  client: "Client Name",
+  year: "2024",
+  role: "Your Role",
+  platforms: "Web, iOS, Android",
+  tags: ["Design System"],        // "Design System", "Product Design", or "Motion"
+  coverColor: "#1a2e2c",          // background gradient base color
+  coverAccent: "#00DDC7",         // accent color for placeholder icon
+  coverImage: "my-cover.jpg",     // place file in /images/ — omit for gradient placeholder
+  subtitle: "Short tagline",      // shown below title on the card
+  shortDescription: "One sentence shown on the card.",
+  cardStats: [                    // up to 3 metrics shown on the card
+    { value: "44%", label: "Self-serve resolution" }
+  ],
+  sections: [ ... ]               // case study content (see below)
+}
 ```
 
-3. Go to **Settings → Pages** in your GitHub repository
-4. Under **Source**, select `Deploy from a branch`, choose `main`, and set the folder to `/ (root)`
-5. Click **Save** — your site will be live at `https://yourusername.github.io/your-repo-name/` within a minute or two
+To **hide a project** without deleting it, add `hidden: true` to the object.
 
-> If you use a repo named exactly `yourusername.github.io`, the site deploys to `https://yourusername.github.io/` (no subfolder).
+To **reorder projects**, cut and paste the objects within the array — order here equals order on the page.
 
-## Adding images
+### Add a cover image
 
-Replace the placeholder `div` elements in project pages with real `<img>` tags:
+1. Export as JPG or PNG, recommended size **1200 × 800px**
+2. Drop the file into `/images/`
+3. Set `coverImage: "filename.jpg"` on the project
 
-```html
-<!-- Replace this -->
-<div class="project-figure-placeholder" style="background:...; height:460px;"></div>
+### Case study section types
 
-<!-- With this -->
-<img src="../images/your-project-screenshot.jpg" alt="Description of the image" />
+```js
+{ type: "intro",   title: "...", body: "..." }
+{ type: "text",    title: "...", body: "...", image: "file.jpg", imageAlt: "..." }
+{ type: "image",   src: "file.jpg", alt: "...", caption: "..." }
+{ type: "keywork", items: [{ label: "...", description: "..." }] }
+{ type: "stats",   items: [{ value: "44%", label: "..." }] }
 ```
 
-Place images in an `images/` folder at the root.
+## Theming
 
-## Adding a CV
+Design tokens live in `css/tokens.css` — all colors, spacing, and typography are CSS custom properties. Light and dark values are in the `:root` and `[data-theme="dark"]` blocks.
 
-Drop your CV as `cv.pdf` at the root of the folder. All nav links already point to `cv.pdf`.
-
-## Fonts
-
-Loaded from Google Fonts: Playfair Display (editorial serif), DM Mono (monospace), Inter (body). No build step or local font files required.
+The site defaults to dark mode. Users can toggle via the nav button; their preference is saved to `localStorage`.
