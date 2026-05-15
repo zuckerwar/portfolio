@@ -1,0 +1,106 @@
+/* ─────────────────────────────────────────────
+   Design Tokens — Light & Dark
+──────────────────────────────────────────── */
+
+:root {
+  --accent: #00DDC7;
+  --accent-dim: #00bfad;
+  --accent-subtle: rgba(0, 221, 199, 0.08);
+
+  /* --accent-text: accessible teal for text on light backgrounds (5.2:1 against --bg) */
+  --accent-text: #0066FF;
+
+  /* Light mode */
+  --bg: #F5F4F0;
+  --bg-raised: #EDECE8;
+  --bg-overlay: rgba(245, 244, 240, 0.92);
+  --surface: #FFFFFF;
+  --surface-hover: #F0EFEB;
+
+  --text-primary: #111110;
+  --text-secondary: #4A4A46;
+  --text-muted: #8A8A86;
+  --text-on-accent: #111110;
+
+  --border: rgba(17, 17, 16, 0.10);
+  --border-strong: rgba(17, 17, 16, 0.20);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.14);
+
+  /* Typography */
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Layout */
+  --max-width: 1120px;
+  --nav-height: 64px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-mid: 280ms;
+  --dur-slow: 480ms;
+}
+
+[data-theme="dark"] {
+  /* In dark mode the bright teal is legible, use it for text too */
+  --accent-text: #00DDC7;
+
+  --bg: #16191D;
+  --bg-raised: #1A1A18;
+  --bg-overlay: rgba(17, 17, 16, 0.92);
+  --surface: #232320;
+  --surface-hover: #2C2C29;
+
+  --text-primary: #F0EFE9;
+  --text-secondary: #A8A8A2;
+  --text-muted: #5C5C58;
+  --text-on-accent: #111110;
+
+  --border: rgba(240, 239, 233, 0.08);
+  --border-strong: rgba(240, 239, 233, 0.16);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.60);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --accent-text: #00DDC7;
+
+    --bg: #111110;
+    --bg-raised: #1A1A18;
+    --bg-overlay: rgba(17, 17, 16, 0.92);
+    --surface: #232320;
+    --surface-hover: #2C2C29;
+
+    --text-primary: #F0EFE9;
+    --text-secondary: #A8A8A2;
+    --text-muted: #5C5C58;
+    --text-on-accent: #111110;
+
+    --border: rgba(240, 239, 233, 0.08);
+    --border-strong: rgba(240, 239, 233, 0.16);
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.30);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.40);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.60);
+  }
+}

@@ -1,295 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yaara Zuckerwar — Design Systems &amp; Product Designer</title>
-  <meta name="description" content="Senior Design Systems & Product Designer. 15+ years building the foundations that help teams ship at scale. Based in Hamburg." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yaara Zuckerwar — Product Designer</title>
+  <meta name="description"
+    content="Product designer specializing in design systems, complex product experiences, and design-engineering alignment. Work includes Kleinanzeigen, XING, Deutsche Bank, and Google.">
+  <meta name="author" content="Yaara Zuckerwar">
+  <link rel="canonical" href="https://yaara.design/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yaara.design/">
+  <meta property="og:title" content="Yaara Zuckerwar — Design Systems & Product Design">
+  <meta property="og:description"
+    content="Product designer specializing in design systems, complex product experiences, and design-engineering alignment.">
+  <meta property="og:image" content="https://yaara.design/images/og-cover.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yaara Zuckerwar — Design Systems & Product Design">
+  <meta name="twitter:description"
+    content="Product designer specializing in design systems, complex product experiences, and design-engineering alignment.">
+  <meta name="twitter:image" content="https://yaara.design/images/og-cover.png">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yaara Zuckerwar",
+    "jobTitle": "Product Designer",
+    "description": "Product designer specializing in design systems, complex product experiences, and design-engineering alignment.",
+    "url": "https://yaara.design/",
+    "sameAs": [
+      "https://linkedin.com/in/yaaras",
+      "https://github.com/zuckerwar"
+    ],
+    "knowsAbout": ["Design Systems", "Product Design", "Motion Design", "UX Design", "Design Tokens"]
+  }
+  </script>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo-favicon.svg">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Inline theme script — prevents flash of wrong theme -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', saved || 'dark');
+    })();
+  </script>
 </head>
+
 <body>
 
-<div id="cursor" aria-hidden="true"></div>
-<div id="cursor-ring" aria-hidden="true"></div>
+  <!-- ── Navigation ── -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Yaara Zuckerwar — home">
+        <svg class="nav__logo-img" width="160" height="160" viewBox="0 0 160 160" fill="none"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M87.5872 18.2523C91.6743 10.594 101.044 7.75693 108.516 11.9156C115.987 16.0745 118.73 25.6537 114.643 33.3123C111.631 38.956 105.75 41.9785 99.8749 41.5154L100.289 41.7449L99.775 41.4665C96.0142 49.2544 93.1597 57.5879 91.264 66.2849L108.324 71.2823C109.19 69.5373 110.396 69.7736 110.407 69.7758C112.932 70.1249 112.045 72.707 112.022 72.7724L109.562 81.0243C106.814 85.8187 105.786 81.7656 105.78 81.7416C105.705 80.1012 104.394 79.6305 104.371 79.6225C101.63 78.6355 93.0317 76.7722 89.7706 76.0799C89.2908 82.4257 88.8471 88.5584 88.5027 93.4071C88.5105 94.3342 88.5258 95.2638 88.554 96.1944C88.5497 96.1923 88.4652 96.1508 88.3136 96.0789C87.9972 100.571 87.8019 103.443 87.7992 103.483C88.0982 125.232 106.316 124.037 106.329 124.036C120.357 123.865 123.158 114.359 123.663 111.748C120.167 111.969 117.759 112.736 117.739 112.742C127.367 102.916 127.079 90.6025 127.077 90.5043C136.654 101.917 135.993 113.873 135.989 113.955C134.661 113.309 133.317 112.834 131.991 112.488C131.473 115.586 127.822 131.048 105.959 136.74C105.929 136.747 77.1135 143.423 75.9057 150C76.0576 143.317 49.227 130.905 49.1737 130.88C28.8017 120.782 28.4826 104.767 28.6113 101.764C27.1193 101.811 25.5703 102.002 24 102.398C24.0143 102.302 25.8003 90.4718 37.4855 81.2593C37.4608 81.3651 34.6858 93.3565 42.1143 104.938C42.0923 104.926 40.0609 103.782 36.9116 102.868C36.8928 105.631 37.8112 115.362 51.3896 118.368C51.521 118.404 69.0119 123.189 73.702 102.029C73.7063 101.975 74.117 96.9423 75.0874 89.3157C75.2109 83.5992 75.6838 77.9484 76.4971 72.4002C73.9226 71.4934 64.6814 68.2695 61.6357 67.65C61.6039 67.6434 60.2431 67.371 59.3104 68.7245C59.2727 68.7609 56.2637 71.6388 56.4721 66.1518L58.7636 57.8523C58.7784 57.7869 59.396 55.1276 61.7315 56.1407C61.768 56.1543 62.8915 56.5897 62.7038 58.5015L78.2957 62.673C80.5079 52.7888 83.8338 43.3143 88.2137 34.4655C85.203 29.7603 84.7611 23.548 87.5872 18.2523ZM104.528 19.3879C101.083 17.4704 96.762 18.7789 94.8774 22.3097C92.993 25.8407 94.2577 30.259 97.7023 32.1767C101.148 34.0944 105.468 32.7859 107.353 29.2549C109.237 25.7237 107.973 21.3056 104.528 19.3879Z"
+            fill="currentColor" />
+        </svg>
+        <span class="nav__logo-name">Yaara Zuckerwar</span>
+      </a>
+      <div class="nav__right">
+        <ul class="nav__links" role="list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://linkedin.com/in/yaaras" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-<nav class="nav" id="nav" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo" aria-label="Yaara — Home">Yaara</a>
-  <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
-    <li><a href="https://www.linkedin.com/in/yaaras/" target="_blank" rel="noopener" class="nav-cta" aria-label="Connect on LinkedIn">Connect</a></li>
-  </ul>
-</nav>
+  <main>
 
-<main>
+    <!-- ── Hero: eyebrow + bio ── -->
+    <section class="hero" id="description" aria-labelledby="hero-heading">
+      <div class="container">
+        <p class="hero__eyebrow animate-in" style="--delay:100ms">Design Systems &amp; Product Design</p>
+        <p class="hero__bio animate-in" style="--delay:250ms">
+          <strong>Product designer</strong> specializing in <strong>design systems</strong>,
+          complex product experiences, and <strong>design-engineering alignment</strong>.
+        </p>
+      </div>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-heading">
-    <p class="hero-eyebrow">Design Systems &amp; Product Design · Hamburg</p>
-    <h1 class="hero-headline" id="hero-heading">
-      <span class="word w1"><span class="word-inner">Design</span></span>
-      <span class="word w2"><span class="word-inner">&nbsp;that</span></span>
-      <br>
-      <span class="word w3"><span class="word-inner">scales</span></span>
-      <span class="word w4"><span class="word-inner">&nbsp;&amp;</span></span>
-      <span class="word w5"><span class="word-inner">&nbsp;lasts</span></span>
-    </h1>
-    <div class="hero-sub">
-      <p class="hero-desc">
-        I design the <strong>systems, decision frameworks, and product foundations</strong> that help teams ship consistent, accessible experiences at scale — with <strong>AI</strong> built into every part of how I work.
-      </p>
-      <div class="hero-stats" aria-label="Career highlights">
-        <div>
-          <div class="hero-stat-num">15<span style="font-size:2rem;color:var(--blue)">+</span></div>
-          <div class="hero-stat-label">Years</div>
-        </div>
-        <div>
-          <div class="hero-stat-num">4</div>
-          <div class="hero-stat-label">Companies</div>
-        </div>
-        <div>
-          <div class="hero-stat-num">∞</div>
-          <div class="hero-stat-label">Systems</div>
+    <!-- ── Project detail panel — opens here, pushing specializations + grid down ── -->
+    <div class="project-detail" id="project-detail" aria-live="polite" aria-label="Project case study"></div>
+
+    <!-- ── Specializations — visible below open project or below bio ── -->
+    <div class="hero__specs-section">
+      <div class="container">
+        <div class="hero__specializations">
+          <div class="spec animate-in" style="--delay:420ms">
+            <strong class="spec__label">Systems</strong>
+            <p class="spec__text">Building the token architecture, contribution models, and governance processes that
+              let multiple teams work from one source of truth.</p>
+          </div>
+          <div class="spec animate-in" style="--delay:540ms">
+            <strong class="spec__label">Product</strong>
+            <p class="spec__text">Designing complex product flows across platforms — from the user problem through to
+              the decision tradeoffs and the shipped experience.</p>
+          </div>
+          <div class="spec animate-in" style="--delay:660ms">
+            <strong class="spec__label">Alignment</strong>
+            <p class="spec__text">Closing the gap between design and engineering — through specs, shared decision
+              frameworks, and the kind of cross-functional work that makes quality durable.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- PILLARS -->
-  <section class="pillars-section" aria-labelledby="pillars-heading">
-    <p class="section-label reveal" id="pillars-heading">What I do</p>
-    <div class="pillars-grid">
-      <div class="pillar reveal">
-        <div class="pillar-index">01</div>
-        <h2 class="pillar-title">Systems</h2>
-        <p class="pillar-body">Building the token architecture, contribution models, and governance processes that let multiple teams work from one source of truth.</p>
+    <!-- ── Projects ── -->
+    <section class="projects-section" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="projects-section__header">
+          <h2 class="section-label" id="work-heading">Selected work</h2>
+          <span class="section-label" aria-hidden="true">7 projects</span>
+        </div>
+
+        <div class="projects-grid page-enter" id="projects-grid" aria-label="Portfolio projects">
+          <!-- Cards injected by main.js -->
+        </div>
       </div>
-      <div class="pillar reveal reveal-delay-1">
-        <div class="pillar-index">02</div>
-        <h2 class="pillar-title">Product</h2>
-        <p class="pillar-body">Designing complex product flows across platforms — from the user problem through to the decision tradeoffs and the shipped experience.</p>
-      </div>
-      <div class="pillar reveal reveal-delay-2">
-        <div class="pillar-index">03</div>
-        <h2 class="pillar-title">Alignment</h2>
-        <p class="pillar-body">Closing the gap between design and engineering — through specs, shared decision frameworks, and the cross-functional work that makes quality durable.</p>
-      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Yaara Zuckerwar</p>
+      <nav class="footer__links" aria-label="Social links">
+        <a href="https://github.com/zuckerwar" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://codepen.io/yaara" target="_blank" rel="noopener noreferrer">CodePen</a>
+      </nav>
     </div>
-  </section>
+  </footer>
 
-  <!-- WORK -->
-  <section class="work-section" id="work" aria-labelledby="work-heading">
-    <div class="work-header">
-      <h2 class="work-title reveal" id="work-heading">Selected<br><em style="color:var(--muted)">Work</em></h2>
-      <ul class="work-filter reveal" aria-label="Filter projects by type">
-        <li><a href="#" data-tag="all" class="active">All</a></li>
-        <li><a href="#" data-tag="design-system">System</a></li>
-        <li><a href="#" data-tag="product-design">Product</a></li>
-        <li><a href="#" data-tag="motion">Motion</a></li>
-      </ul>
-    </div>
-
-    <div class="projects-grid">
-
-      <div class="project-card project-card--large reveal" data-tags="product-design">
-        <div class="card-inner">
-          <a href="projects/amicable-solutions.html" aria-label="Amicable Solutions in C2C Transactions">
-            <img src="assets/drc-thumb.jpg" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Product Design</div>
-              <h3 class="card-title">Amicable Solutions in C2C Transactions</h3>
-              <p class="card-desc">Redesigning conflict resolution to reduce escalations and build lasting trust between buyers and sellers.</p>
-              <span class="card-arrow">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--medium reveal reveal-delay-1" data-tags="design-system">
-        <div class="card-inner">
-          <a href="projects/kleinanzeigen-design-system.html" aria-label="Kleinanzeigen Design System">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Design System</div>
-              <h3 class="card-title">Kleinanzeigen Design System</h3>
-              <p class="card-desc">A scalable design foundation for Germany's largest classifieds platform.</p>
-              <span class="card-arrow">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--medium reveal reveal-delay-2" data-tags="product-design">
-        <div class="card-inner">
-          <a href="projects/transactions-overview.html" aria-label="Transactions Overview">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Product Design</div>
-              <h3 class="card-title">Transactions Overview</h3>
-              <p class="card-desc">Making complex financial flows simple and transparent for everyday users.</p>
-              <span class="card-arrow">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--third reveal" data-tags="design-system">
-        <div class="card-inner">
-          <a href="projects/xing-design-system.html" aria-label="XING Design System">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Design System</div>
-              <h3 class="card-title">XING Design System</h3>
-              <span class="card-arrow">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--third reveal reveal-delay-1" data-tags="product-design">
-        <div class="card-inner">
-          <a href="projects/xing-settings.html" aria-label="Re-Designing Settings for XING">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Product Design</div>
-              <h3 class="card-title">Re-Designing Settings for XING</h3>
-              <span class="card-arrow">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--third reveal reveal-delay-2" data-tags="product-design">
-        <div class="card-inner">
-          <a href="projects/google-snapseed.html" aria-label="Google Snapseed UX Redesign">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Product Design</div>
-              <h3 class="card-title">Google Snapseed UX Redesign</h3>
-              <span class="card-arrow">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--medium reveal" data-tags="product-design">
-        <div class="card-inner">
-          <a href="projects/deutsche-bank.html" aria-label="Deutsche Bank Advisors Platform">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Product Design</div>
-              <h3 class="card-title">Deutsche Bank Advisors Platform</h3>
-              <p class="card-desc">Complex financial tooling redesigned for advisor efficiency.</p>
-              <span class="card-arrow">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card project-card--medium reveal reveal-delay-1" data-tags="motion">
-        <div class="card-inner">
-          <a href="projects/motion.html" aria-label="Moving Things — motion design">
-            <img src="assets/Placeholder.png" alt="" class="card-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-              <div class="card-tag">Motion</div>
-              <h3 class="card-title">Moving Things</h3>
-              <p class="card-desc">Experiments in motion, micro-interactions, and the physics of interface feel.</p>
-              <span class="card-arrow">View experiments <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="experience-section" id="experience" aria-labelledby="exp-heading">
-    <p class="section-label reveal" id="exp-heading">Experience</p>
-    <ul class="exp-list">
-      <li class="exp-item reveal">
-        <span class="exp-period">2021 — Now</span>
-        <div>
-          <div class="exp-role">Senior Design System &amp; Product Designer</div>
-          <div class="exp-company">Kleinanzeigen</div>
-        </div>
-        <span class="exp-num" aria-hidden="true">01</span>
-      </li>
-      <li class="exp-item reveal reveal-delay-1">
-        <span class="exp-period">2016 — 2021</span>
-        <div>
-          <div class="exp-role">Senior UX Designer</div>
-          <div class="exp-company">XING</div>
-        </div>
-        <span class="exp-num" aria-hidden="true">02</span>
-      </li>
-      <li class="exp-item reveal reveal-delay-2">
-        <span class="exp-period">2015 — 2016</span>
-        <div>
-          <div class="exp-role">UX Designer</div>
-          <div class="exp-company">Google</div>
-        </div>
-        <span class="exp-num" aria-hidden="true">03</span>
-      </li>
-      <li class="exp-item reveal reveal-delay-3">
-        <span class="exp-period">2015 — 2016</span>
-        <div>
-          <div class="exp-role">UX Designer</div>
-          <div class="exp-company">Deutsche Bank via HCL Technologies</div>
-        </div>
-        <span class="exp-num" aria-hidden="true">04</span>
-      </li>
-    </ul>
-  </section>
-
-  <!-- CAPABILITIES -->
-  <section class="capabilities-section" aria-labelledby="caps-heading">
-    <p class="section-label reveal" id="caps-heading">Capabilities</p>
-    <div class="caps-grid">
-      <div class="reveal">
-        <p class="caps-intro">Building things with <em>depth</em> and the craft to make them <em>last</em>.</p>
-        <div class="ai-badge" role="status">AI-augmented workflow</div>
-      </div>
-      <ul class="caps-list reveal reveal-delay-1">
-        <li class="caps-item">Design System Architecture &amp; Governance</li>
-        <li class="caps-item">Token Architecture &amp; Multi-brand Theming</li>
-        <li class="caps-item">Component Library Design &amp; Documentation</li>
-        <li class="caps-item">Complex Product UX &amp; Flow Design</li>
-        <li class="caps-item">Cross-platform Experience Design</li>
-        <li class="caps-item">Design–Engineering Alignment</li>
-        <li class="caps-item">Accessibility &amp; Inclusive Design</li>
-        <li class="caps-item">Motion &amp; Interaction Design</li>
-        <li class="caps-item">Figma · Prototyping · Design QA</li>
-      </ul>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <span class="footer-name">© 2026 Yaara Zuckerwar</span>
-  <ul class="footer-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
-    <li><a href="https://github.com/zuckerwar" target="_blank" rel="noopener">GitHub</a></li>
-    <li><a href="https://codepen.io/Zuckerwar/" target="_blank" rel="noopener">Codepen</a></li>
-    <li><a href="https://www.linkedin.com/in/yaaras/" target="_blank" rel="noopener">LinkedIn</a></li>
-  </ul>
-</footer>
-
-<script src="js/main.js"></script>
+  <!-- Data + App -->
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
