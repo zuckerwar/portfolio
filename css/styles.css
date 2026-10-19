@@ -1163,9 +1163,10 @@ body.case-page .back-link {
   margin: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .moving-things-gallery {
-    grid-template-columns: minmax(0, 280px);
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: center;
   }
 }
 
