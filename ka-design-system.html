@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kleinanzeigen Design System — Case Study</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="case-page case-page-kleinanzeigen">
+  <div class="site-header site-header-post">
+    <button class="js-menu menu button-clear" aria-label="Site navigation">
+      <span class="menu-icon-line menu-icon-line-1"></span>
+      <span class="menu-icon-line menu-icon-line-2"></span>
+      <span class="menu-icon-line menu-icon-line-3"></span>
+    </button>
+    <h1 class="site-name site-name-post">
+      <a class="siteLogoLink site-name-link-parent" href="index.html" aria-label="Start page">
+        <span class="site-logo-word site-logo-first" aria-hidden="true"></span>
+        <span class="site-logo-word site-logo-last" aria-hidden="true"></span>
+      </a>
+    </h1>
+    <div class="site-nav-placeholder"></div>
+  </div>
+
+  <main class="case-study case-study-kleinanzeigen">
+    <header class="case-hero">
+      <h1 class="case-title">Kleinanzeigen Design System</h1>
+      <p class="case-lede">Scaling a multi-platform design system for millions of users.</p>
+    </header>
+    <dl class="case-project-details case-project-details-horizontal">
+      <div><dt>Project scope</dt><dd>End-to-End</dd></div>
+      <div><dt>Role</dt><dd>Design Ops</dd></div>
+      <div><dt>Client</dt><dd>Kleinanzeigen</dd></div>
+      <div><dt>Date</dt><dd>2024 - 2026</dd></div>
+    </dl>
+    <div class="case-layout case-layout-centered">
+      <div class="case-content">
+        <section class="case-section" id="context">
+          <h2>Context</h2>
+          <p>Design systems are not just UI libraries - they are a way to align teams, reduce friction, and improve how product decisions scale. At Kleinanzeigen, I work on the design system as the foundation for consistent, scalable, accessible product experiences across Android, iOS, and web.</p>
+          <img class="case-image" src="assets/ka-ds-hero.png" alt="Kleinanzeigen Design System interface elements">
+        </section>
+        <section class="case-section" id="challenge">
+          <h2>The challenge</h2>
+          <p>When I joined, the system had grown organically alongside the product. Components existed in multiple versions across platforms, token naming was inconsistent, dark mode coverage was incomplete, and there was no clear model for how teams should contribute or when they should deviate. The result was predictable: designers made local fixes, engineers made local fixes, and the distance between the two grew.
+        </section>
+        <section class="case-section" id="role">
+          <h2>My role</h2>
+          <p>I focus on three things in parallel: evolving the component library, improving the token architecture, and building the processes that keep the system healthy after each release.</p>
+          <div class="highlight-card">
+            <h3>Focus areas</h3>
+            <div class="highlight-items">
+              <article class="highlight-item">
+                <h4>Token architecture</h4>
+                <p>Restructured the token layer into semantic, tier-based naming that maps cleanly to both Figma variables and code. Reduced the ambiguity that caused designers and engineers to make different decisions from the same spec.</p>
+              </article>
+              <article class="highlight-item">
+                <h4>Component specs</h4>
+                <p>Every component now ships with full anatomy documentation, state coverage, dark mode specs, accessibility requirements, and explicit do/don't guidance. The goal is that an engineer should be able to implement from the spec without a follow-up meeting.</p>
+                <img class="case-image" src="assets/ka-ds-anatomy.png" alt="Component anatomy">
+              </article>
+              <article class="highlight-item">
+                <h4>Dark mode &amp; accessibility</h4>
+                <p>Embedded both as first-class requirements in the component contribution process, not post-hoc additions. Each component specifies its color contract in both modes and its target WCAG level.</p>
+                <img class="case-image" src="assets/ka-ds-dm.png" alt="Dark mode implementation">
+
+              </article>
+              <article class="highlight-item">
+                <h4>Contribution model</h4>
+                <p>Built a lightweight process for product teams to propose, review, and graduate components into the system, reducing the bottleneck on the core system team.</p>
+              </article>
+              <article class="highlight-item">
+                <h4>Engineering alignment</h4>
+                <p>Run regular syncs with front-end leads to close gaps between Figma spec and implementation, and maintain a shared decision log for non-obvious choices.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="case-section" id="reflection">
+          <h2>Reflection</h2>
+          <p>The hardest part of design systems work is not designing the components - it's designing the system around the system: the naming conventions, the decision-making process, the documentation culture, the way you handle disagreement between platform teams. The components are visible. The infrastructure that keeps them consistent is not, and that's where most of the long-term leverage lives.</p>
+      </div>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html">← Back to portfolio</a>
+      <a href="shop-to-shop.html">Next case study →</a>
+    </footer>
+  </main>
+
+  <script src="js/nav.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

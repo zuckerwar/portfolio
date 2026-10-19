@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrast Scale — Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="case-page case-page-token-scale">
+  <div class="site-header site-header-post">
+    <button class="js-menu menu button-clear" aria-label="Site navigation">
+      <span class="menu-icon-line menu-icon-line-1"></span>
+      <span class="menu-icon-line menu-icon-line-2"></span>
+      <span class="menu-icon-line menu-icon-line-3"></span>
+    </button>
+    <h1 class="site-name site-name-post">
+      <a class="siteLogoLink site-name-link-parent" href="index.html" aria-label="Start page">
+        <span class="site-logo-word site-logo-first" aria-hidden="true"></span>
+        <span class="site-logo-word site-logo-last" aria-hidden="true"></span>
+      </a>
+    </h1>
+    <div class="site-nav-placeholder"></div>
+  </div>
+  <main class="case-study">
+    <header class="case-hero">
+      <h1 class="case-title">Color Token Scale</h1>
+      <p class="case-lede">Generate 50–900 color-token scales from a base color, with WCAG contrast ratings.</p>
+    </header>
+    <div class="case-layout project-page-layout">
+      <div class="case-content">
+        <section class="case-section">
+          <div class="contrast-tool">
+            <p class="contrast-tool-subtitle">Pick a base color — get a full 50–900 scale with WCAG contrast ratings</p>
+            <div class="contrast-tool-controls">
+              <div class="contrast-tool-control">
+                <label class="contrast-tool-label" for="contrast-color-picker">Base color</label>
+                <div class="contrast-tool-color-input">
+                  <input type="color" id="contrast-color-picker" value="#FF4457">
+                  <input type="text" id="contrast-hex-input" value="#FF4457" maxlength="7" aria-label="Base color hex value" spellcheck="false">
+                </div>
+              </div>
+              <div class="contrast-tool-control">
+                <label class="contrast-tool-label" for="contrast-prefix-input">Token prefix</label>
+                <input type="text" class="contrast-tool-prefix" id="contrast-prefix-input" value="color-brand" spellcheck="false">
+              </div>
+              <span class="contrast-tool-copied" id="contrast-tool-status" role="status" aria-live="polite"></span>
+            </div>
+            <p class="contrast-tool-error" id="contrast-tool-error" aria-live="polite"></p>
+            <div class="contrast-tool-table-scroll">
+              <div class="contrast-tool-column-header" aria-hidden="true">
+                <span></span>
+                <span>Token</span>
+                <span>Hex</span>
+                <span>vs white</span>
+                <span>vs black</span>
+              </div>
+              <div class="contrast-tool-scale" id="contrast-tool-scale" aria-label="Generated color scale"></div>
+            </div>
+            <p class="contrast-tool-hint">Click a row or focus it and press Enter to copy the token name.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#projects">← Back to projects</a>
+      <a href="moving-things.html">Next project →</a>
+    </footer>
+  </main>
+  <script src="js/nav.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/contrast-scale.js"></script>
+</body>
+</html>

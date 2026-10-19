@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XING Design System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="case-page case-page-xing">
+  <div class="site-header site-header-post">
+    <button class="js-menu menu button-clear" aria-label="Site navigation">
+      <span class="menu-icon-line menu-icon-line-1"></span>
+      <span class="menu-icon-line menu-icon-line-2"></span>
+      <span class="menu-icon-line menu-icon-line-3"></span>
+    </button>
+
+    <h1 class="site-name site-name-post">
+      <a class="siteLogoLink  site-name-link-parent" href="index.html" aria-label="Start page">
+        <span class="site-logo-word site-logo-first" aria-hidden="true"></span>
+        <span class="site-logo-word site-logo-last" aria-hidden="true"></span>
+      </a>
+    </h1>
+
+    <div class="site-nav-placeholder"></div>
+  </div>
+
+  <main class="case-study case-study-xing">
+    <header class="case-hero">
+      <h1 class="case-title">XING Design System</h1>
+      <p class="case-lede">A shared design foundation for creating consistent experiences across a complex product ecosystem.</p>
+    </header>
+    <dl class="case-project-details case-project-details-horizontal">
+      <div><dt>Project scope</dt><dd>End-to-End</dd></div>
+      <div><dt>Role</dt><dd>Product Designer</dd></div>
+      <div><dt>Client</dt><dd>XING</dd></div>
+      <div><dt>Date</dt><dd>2017</dd></div>
+    </dl>
+    <div class="case-layout case-layout-centered">
+      <div class="case-content">
+        <section class="case-section" id="context">
+          <h2>Context</h2>
+          <p>When XING expanded from a single Hamburg office to a multi-office European organization, its design practice scaled without a shared foundation. Three separate design systems had emerged organically across web, iOS, and Android teams - each internally consistent, none of them talking to the others. The result was visual fragmentation, duplicated effort, and a growing gap between what designers handed off and what engineers shipped.</p>
+          <h3>My role</h3>
+          <p>Core contributor to the design system workstream. I was involved from the audit phase through to the foundations definition and initial component library build. My focus was the interface inventory, the semantic color and typography systems, and the motion foundation.</p>
+          <p>From there, we worked foundation-up using an atomic design approach: define the tokens before designing the components, define the components before assembling the patterns. The aim was a system where changing a foundational decision - a brand color, a type scale step - propagated correctly everywhere, rather than requiring manual updates across hundreds of components.</p>
+          <div class="highlight-card">
+            <h3>Foundations defined</h3>
+            <div class="highlight-items">
+              <article class="highlight-item">
+                <h4>Typography</h4>
+                <p>Unified type scale with semantic role assignments (display, body, label, caption) that mapped to platform-native equivalents.</p>
+                <img class="case-image" src="assets/xing-ds-typography.png" alt="Typography system">
+              </article>
+              <article class="highlight-item">
+                <h4>Iconography</h4>
+                <p>Consolidated icon library with consistent sizing, stroke weight, and optical alignment rules.</p>
+                <img class="case-image" src="assets/xing-ds-iconography.png" alt="Iconography system">
+              </article>
+              <article class="highlight-item">
+                <h4>Semantic color palette</h4>
+                <p>Role-based color tokens (surface, content, interactive, feedback) rather than raw hex values, enabling theming and future brand updates.</p>
+                <img class="case-image" src="assets/xing-ds-semantic-colors.png" alt="Semantic color palette">
+              </article>
+              <article class="highlight-item">
+                <h4>Spacing scale</h4>
+                <p>4px base grid with named steps, shared across all three platforms.</p>
+              </article>
+              <article class="highlight-item">
+                <h4>Motion</h4>
+                <p>Easing curves, duration ranges, and usage principles for transitions and micro-interactions.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="case-section" id="process">
+          <h2>Process</h2>
+          <p>We started with a full interface inventory - a systematic audit of every component, pattern, and visual decision across all three systems. The inventory surfaced the redundancy (three buttons, seven card variants, no consistent icon size scale) and gave us a shared vocabulary for the consolidation conversations.</p>
+          <ul>
+            <li><strong>Consistency:</strong> shared patterns make familiar interactions easier to recognize.</li>
+            <li><strong>Flexibility:</strong> components should support different product contexts without losing their common behavior. </li>
+            <li><strong>Clarity:</strong> guidance should help teams understand when and how to use each pattern. Clear contribution process.</li>
+            <img class="case-image" src="assets/IMG_0910 1.png" alt="Component creation process">
+          </ul>
+          <aside class="case-note">A useful system balances a recognizable foundation with enough flexibility to solve real product needs.</aside>
+        </section>
+        <section class="case-section" id="application">
+          <h2>Putting it to work</h2>
+          <p>Start with recurring user needs, identify where interfaces can share a pattern, then document the decisions that make that pattern useful. This keeps the system connected to the product work it is meant to support.</p>
+          <p>As new needs emerge, teams can extend the shared language deliberately rather than creating disconnected conventions.</p>
+        </section>
+      </div>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html">← Back to portfolio</a>
+      <a href="ka-design-system.html">Next case study →</a>
+    </footer>
+  </main>
+
+  <script src="js/nav.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

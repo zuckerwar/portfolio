@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions Overview — Case Study</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="case-page case-page-transactions">
+  <div class="site-header site-header-post">
+    <button class="js-menu menu button-clear" aria-label="Site navigation">
+      <span class="menu-icon-line menu-icon-line-1"></span>
+      <span class="menu-icon-line menu-icon-line-2"></span>
+      <span class="menu-icon-line menu-icon-line-3"></span>
+    </button>
+    <h1 class="site-name site-name-post">
+      <a class="siteLogoLink site-name-link-parent" href="index.html" aria-label="Start page">
+        <span class="site-logo-word site-logo-first" aria-hidden="true"></span>
+        <span class="site-logo-word site-logo-last" aria-hidden="true"></span>
+      </a>
+    </h1>
+    <div class="site-nav-placeholder"></div>
+  </div>
+
+  <main class="case-study case-study-transactions">
+    <header class="case-hero">
+      <h1 class="case-title">Transactions Overview</h1>
+      <p class="case-lede">A central place for buyers and sellers to track their transactions.</p>
+    </header>
+    <dl class="case-project-details case-project-details-horizontal">
+      <div><dt>Project scope</dt><dd>End-to-End</dd></div>
+      <div><dt>Role</dt><dd>Product Designer</dd></div>
+      <div><dt>Client</dt><dd>Kleinanzeigen</dd></div>
+      <div><dt>Date</dt><dd>Not specified</dd></div>
+    </dl>
+    <div class="case-layout case-layout-centered">
+      <div class="case-content">
+        <section class="case-section" id="overview">
+          <h2>One place to follow</h2>
+          <p>A transaction overview page for Kleinanzeigen's C2C payment experience, showing ongoing and past transactions in one clear interface. The goal: give buyers and sellers a single place to track what's happening with their transactions, without having to dig through individual conversations to find out.</p>
+          <p>The overview should help people find the transaction they need without having to reconstruct its status from scattered messages or steps.</p>
+          <div class="case-gallery" role="region" aria-label="Shop-to-Shop Shipping design gallery">
+            <div class="case-gallery-viewport" tabindex="0">
+              <div class="case-gallery-track">
+                <article class="case-gallery-item">
+                  <div class="case-gallery-copy">
+                    <h3>Transactions overview page</h3>
+                    <p>Users can view all their transactions in one centralized location.</p>
+                  </div>
+                  <img src="assets/transactions-overview-page.png" alt="Transactions overview page">
+                </article>
+                <article class="case-gallery-item">
+                  <div class="case-gallery-copy">
+                    <h3>Transaction details page</h3>
+                    <p>Buyers and sellers can view the details of each transaction.</p>
+                  </div>
+                  <img src="assets/transaction-details-page.png" alt="Transaction details page">
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="case-section" id="challenge">
+          <h2>The challenge</h2>
+          <p>Before this, there was no dedicated place for users to see the status of their transactions. Buyers and sellers had to navigate to individual chats to find out where things stood - which worked for a single transaction but broke down fast for anyone managing more than one at a time. For sellers especially, tracking multiple ongoing sales meant constant context-switching with no at-a-glance view of what needed attention.</p>
+          <p>On top of the UX gap, DAC7 - the EU regulation requiring platforms to report seller income - introduced a new compliance requirement: sellers needed a structured, accessible record of their transaction activity.</p>
+          <p>Make the most important information easy to scan, then provide a clear path to details when someone needs them. Buyer and seller views can share the same transaction context while highlighting the actions relevant to each person.</p>
+          <ul>
+            <li>Make status and recent activity easy to recognize.</li>
+            <li>Keep next steps close to the transaction they belong to.</li>
+            <li>Give people a clear route back to supporting details.</li>
+            <li>Provide sellers information about DAC7 compliance.</li>
+          </ul>
+        </section>
+        <section class="case-section" id="role">
+          <h2>My role</h2>
+          <p>I designed the transaction overview experience end to end, including structure, status visibility, and the overall information hierarchy for both buyers and sellers.</p>
+          <p>I focused on creating a clear, structured overview that makes it easy for users to understand the status of their transactions at a glance. This involved designing a layout that prioritizes the most important information and provides easy access to detailed views when needed.</p>
+        </section>
+        <section class="case-section" id="research">
+          <h2>Research</h2>
+          <p>The overview was new to most users but received strongly positively - particularly by high-volume and PRO sellers who had previously managed everything through a cluttered message inbox. For that group, a structured, table-based view with clear statuses, prices, and dates was a significant upgrade.</p>
+          <p>DAC7 compliance was a genuine user need, not just a regulatory checkbox. Sellers actively used the overview to monitor how close they were to the reporting threshold, and the absence of a sales counter and pending amounts in the summary created real anxiety - users couldn't easily tell how much they could still sell before hitting the limit.</p>
+          <p>The clearest point of confusion: users who hadn't used Kleinanzeigen's integrated payment feature expected the overview to show their entire sales history on the platform, not just in-app transactions. The scope mismatch caused disorientation and unmet expectations around completeness.</p>
+          <h3>What this shaped</h3>
+          <p>The research findings directly influenced the design priorities: surfacing pending amounts alongside completed totals, adding a sales counter tied to the DAC7 30-item threshold, and structuring the page to make the scope of what's included (in-app transactions only) immediately clear, rather than leaving users to discover that limitation after the fact.</p>
+          <p>The buyer purchases overview and the wallet concept, making earnings immediately visible at the moment of payment rather than abstract and deferred, were identified as the natural next layer, and the architecture of this page was designed to support both.</p>
+        </section>
+        <section class="case-section" id="outcome">
+          <h2>Outcome</h2>
+          <p>The transaction overview page was successfully implemented, providing users with a centralized location to track their transactions. Feedback from users indicated that the new interface significantly improved their ability to manage multiple transactions and understand their status without having to navigate through individual chats.</p>
+          <p>Additionally, the overview page helped sellers comply with DAC7 regulations by providing a clear record of their transaction activity, which was well-received by both users and regulatory bodies.</p>
+          <ul>
+            <li>A dedicated overview page as a central hub for all transaction activity.</li>
+            <li>Clear separation between ongoing and past transactions.</li>
+            <li>Facilitated compliance with DAC7 regulations for sellers.</li>
+            <li>Structure that serves both the buyer and seller journey.</li>
+            <li>A scalable foundation for future wallet features.</li>
+          </ul>
+      </div>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html">← Back to portfolio</a>
+      <a href="xing-design-system.html">Next case study →</a>
+    </footer>
+  </main>
+
+  <script src="js/nav.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

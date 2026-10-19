@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop-to-Shop Shipping — Case Study</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="case-page case-page-shop-to-shop">
+  <div class="site-header site-header-post">
+    <button class="js-menu menu button-clear" aria-label="Site navigation">
+      <span class="menu-icon-line menu-icon-line-1"></span>
+      <span class="menu-icon-line menu-icon-line-2"></span>
+      <span class="menu-icon-line menu-icon-line-3"></span>
+    </button>
+    <h1 class="site-name site-name-post">
+      <a class="siteLogoLink site-name-link-parent" href="index.html" aria-label="Start page">
+        <span class="site-logo-word site-logo-first" aria-hidden="true"></span>
+        <span class="site-logo-word site-logo-last" aria-hidden="true"></span>
+      </a>
+    </h1>
+    <div class="site-nav-placeholder"></div>
+  </div>
+
+  <main class="case-study case-study-shop-to-shop">
+    <header class="case-hero">
+      <h1 class="case-title">Shop-to-Shop Shipping</h1>
+      <p class="case-lede">Introducing a new delivery option revealed a bigger opportunity</p>
+    </header>
+    <dl class="case-project-details case-project-details-horizontal">
+      <div><dt>Project scope</dt><dd>End-to-End</dd></div>
+      <div><dt>Role</dt><dd>Product Designer</dd></div>
+      <div><dt>Client</dt><dd>Kleinanzeigen</dd></div>
+      <div><dt>Date</dt><dd>2026</dd></div>
+    </dl>
+    <div class="case-layout case-layout-centered">
+      <div class="case-content">
+        <section class="case-section" id="overview">
+          <h2>Overview</h2>
+          <p>Kleinanzeigen was introducing Shop-to-Shop Shipping, giving buyers and sellers a new way to send and receive items through participating shops.</p>
+          <p>Integrating this new delivery option meant more than adding another shipping method. Buyers needed to understand how delivery worked, select a convenient pickup point, and complete their transaction with confidence.</p>
+           <p>As I worked across the transaction journey, it became clear that the existing offer flow also needed to evolve. To accommodate additional shipping options and future pickup possibilities, we needed to rethink how shipping decisions fitted into the experience.</p>
+          <p>This led to a broader redesign of the offer flow, where we explored different approaches and used product data to validate whether shipping selection needed to happen at that stage at all.</p>
+          <div class="case-gallery" role="region" aria-label="Shop-to-Shop Shipping design gallery">
+            <button class="case-gallery-arrow case-gallery-previous" type="button" aria-label="Scroll gallery backward">
+              <svg class="case-gallery-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8" /></svg>
+            </button>
+            <div class="case-gallery-viewport" tabindex="0">
+              <div class="case-gallery-track">
+                <article class="case-gallery-item">
+                  <div class="case-gallery-copy">
+                    <h3>Shop Selection - Map</h3>
+                    <p>Buyers can select a convenient pickup point using a map or a list.</p>
+                  </div>
+                  <img src="assets/shop-to-shop-map.png" alt="Shops shown on a map with a selected shop highlighted">
+                </article>
+                <article class="case-gallery-item">
+                  <div class="case-gallery-copy">
+                    <h3>Shop Selection - List</h3>
+                    <p>Buyers can select a convenient pickup point using a map or a list.</p>
+                  </div>
+                  <img src="assets/shop-to-shop-list.png" alt="Shop list">
+                </article>
+                <article class="case-gallery-item">
+                  <div class="case-gallery-copy">
+                    <h3>Checkout</h3>
+                    <p>Making it easier to share information and reach an agreement in the product.</p>
+                  </div>
+                  <img src="assets/shop-to-shop-checkout.png" alt="Checkout screen showing the selected shop and delivery details">
+                </article>
+                <article class="case-gallery-item">
+                  <div class="case-gallery-copy">
+                    <h3>Revised offer flow</h3>
+                    <p>Mapping common dispute scenarios to clear actions and appropriate support.</p>
+                  </div>
+                  <img src="assets/offoer-flow-revised.png" alt="Offer flow showing the removal of shipping selection from the offer flow">
+                </article>
+              </div>
+            </div>
+            <button class="case-gallery-arrow case-gallery-next" type="button" aria-label="Scroll gallery forward">
+              <svg class="case-gallery-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" /></svg>
+            </button>
+          </div>
+        </section>
+        <section class="case-section" id="challenge">
+          <h2>The challenge</h2>
+          <h3>Integrating shipping without adding unnecessary complexity</h3>
+          <p>The existing transaction journey needed to accommodate a new delivery model while remaining clear and easy to complete.</p>
+          <p>For buyers, this meant understanding the delivery option and choosing a suitable pickup point. For sellers, the experience needed to fit into the existing transaction process without introducing unnecessary complexity.</p>
+          <p>But Shop-to-Shop Shipping also exposed a broader structural challenge: as Kleinanzeigen introduced more delivery options, the offer flow needed to support that growing complexity.</p>
+          <p>Simply adding more shipping choices to the existing flow risked making it harder to maintain and evolve.</p>
+          <p>The challenge was twofold:</p>
+          <ul>
+            <li>Integrate Shop-to-Shop Shipping into the end-to-end transaction journey.</li>
+            <li>Rethink the offer flow so it could accommodate future delivery options without compromising the user experience.</li>
+          </ul>
+        </section>
+        <section class="case-section" id="integration">
+          <h2>Integrating Shop-to-Shop Shipping</h2>
+          <h3>Making pickup-point delivery part of the journey</h3>
+          <p>I worked across the transaction journey to integrate Shop-to-Shop Shipping into the existing delivery experience.</p>
+          <p>Rather than treating pickup-point selection as an isolated feature, I considered how it connected to ad insertion, shipping selection, checkout, payment, and post-purchase interactions from both buyer and seller perspectives.</p>
+          <p>Buyers could find a convenient pickup location directly within the transaction flow, while Shop-to-Shop Shipping became a natural part of the selling flow for sellers.</p>
+          <figure class="case-wide-image">
+          <img src="assets/shop-to-shop-flow.png" alt="Shop-to-Shop flow">
+          </figure>
+        </section>
+        <section class="case-section" id="re-thinking">
+          <h2>Rethinking the offer flow</h2>
+          <p>Introducing another shipping option exposed a broader challenge: the existing offer flow needed to accommodate future delivery options, including pickup, without adding unnecessary complexity.</p>
+          <p>I explored different approaches to redesigning the flow, questioning whether shipping selection needed to happen at this stage at all.</p>
+        </section>
+         <figure class="case-wide-image">
+          <h3>Offer flow iterations</h3>
+          <img src="assets/offer-iterations.png" alt="Revised offer flow">
+        </figure>
+        <section class="case-section" id="validation">
+          <h2>Validating the approach</h2>
+          <p>Our analysis showed that removing shipping selection from the offer flow did not negatively affect offer-flow completion or conversion.</p>
+          <p>This allowed us to simplify the experience without compromising these key metrics.</p>
+        </section>
+        <section class="case-section" id="impact">
+          <h2>Impact</h2>
+          <p>Shop-to-Shop Shipping quickly became a significant part of Kleinanzeigen's shipping mix, reaching approximately 30–50% of total shipping volume within a few months.</p>
+          <div class="impact-metrics">
+            <div class="impact-metric">
+              <p class="impact-metric-value">€ 770K+</p>
+              <p class="impact-metric-label">Total revenue generated</p>
+            </div>
+            <div class="impact-metric">
+              <p class="impact-metric-value">17.82% ↑</p>
+              <p class="impact-metric-label">Monthly revenue growth after launch</p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html">← Back to portfolio</a>
+      <a href="cs-and-dispute.html">Next case study →</a>
+    </footer>
+  </main>
+
+
+  <script src="js/nav.js"></script>
+  <script src="js/case-gallery.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
