@@ -796,6 +796,10 @@ body.case-page .site-nav-overlay .nav-categories {
       margin: 0;
       padding: 0;
     }
+body.home-page .site-nav-overlay .nav-link,
+body.case-page .site-nav-overlay .nav-link {
+      text-align: left;
+    }
 body.home-page .site-nav-overlay .nav-category,
 body.case-page .site-nav-overlay .nav-category {
       margin: 0;
