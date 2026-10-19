@@ -16,7 +16,6 @@ A personal design portfolio built with plain HTML, CSS, and vanilla JavaScript. 
 ├── google-snapseed.html               # Google Snapseed project
 ├── moving-things.html                 # Animation project
 ├── contrast-scale.html                # Contrast Scale project
-├── typesource.html                    # TypeSource project page
 ├── css/
 │   └── styles.css                     # Site styles, themes, and responsive layout
 ├── js/
