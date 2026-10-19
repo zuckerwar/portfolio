@@ -1369,6 +1369,18 @@ body.case-page .back-link {
 
   .case-gallery-item img {
     width: min(260px, 100%);
+    min-height: 0;
+  }
+
+  .case-study-snapseed .snapseed-gallery,
+  .case-study-snapseed .snapseed-gallery .case-gallery-viewport,
+  .case-study-snapseed .snapseed-gallery .case-gallery-track {
+    height: auto;
+  }
+
+  .case-study-snapseed .snapseed-gallery .case-gallery-item {
+    height: auto;
+    min-height: 600px;
   }
 
   .case-gallery-previous { left: 12px; }
