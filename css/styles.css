@@ -1601,6 +1601,14 @@ html[data-theme="dark"] .case-image-placeholder {
   color: #c0c7ca;
 }
 
+html[data-theme="dark"] .highlight-card {
+  background: #242d30;
+}
+
+html[data-theme="dark"] .case-gallery-copy p {
+  color: #1a1a1a;
+}
+
 html[data-theme="dark"] .impact-metric {
   border-color: #465155;
   background: #202629;
