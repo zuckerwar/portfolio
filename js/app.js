@@ -4,33 +4,11 @@
   var headerBg = document.getElementById('headerBg');
   var themeToggle = document.getElementById('themeToggle');
   var heroName = document.querySelector('.hero-name');
-  var siteLogos = Array.prototype.slice.call(document.querySelectorAll('.siteLogoLink'));
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var savedTheme = localStorage.getItem('theme');
   var currentTheme = savedTheme === 'dark' ? 'dark' : 'light';
 
   document.documentElement.setAttribute('data-theme', currentTheme);
-
-  siteLogos.forEach(function (logo) {
-    var lastBar = logo.querySelector('.site-logo-last');
-    if (!lastBar) return;
-    lastBar.addEventListener('animationend', function (event) {
-      if (event.animationName === 'site-logo-enter-from-right') {
-        logo.classList.remove('site-logo-entering');
-      }
-    });
-  });
-
-  function restartSiteLogoAnimation() {
-    if (reduceMotion.matches) return;
-    siteLogos.forEach(function (logo) {
-      logo.classList.remove('site-logo-entering');
-      void logo.offsetWidth;
-      logo.classList.add('site-logo-entering');
-    });
-  }
-
-  window.addEventListener('pageshow', restartSiteLogoAnimation);
 
   if (heroName) {
     var heroLines = Array.prototype.slice.call(heroName.querySelectorAll('.hero-name-inner'));
