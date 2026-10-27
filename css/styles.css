@@ -307,6 +307,8 @@ body.home-page .section-header {
       color: #1a1a1a;
       padding: 60px 50px 80px;
     }
+body.home-page #work .portfolio-heading-tight { margin-left: -0.015em; }
+body.home-page #work .portfolio-heading-open-rtf { margin-left: 0.04em; }
 
     @media (max-width: 600px) {
 body.home-page .section-header {
@@ -336,11 +338,30 @@ body.home-page .grid-item {
       transition: color 0.2s;
     }
 body.home-page .grid-item:hover { color: #fff; }
-body.home-page .grid-item:hover .grid-item-header { transform: translate3D(0, -6px, 0); }
-body.home-page .grid-item:hover .grid-item-divider { transform: scaleX(1) translate3D(0, 6px, 0); }
-body.home-page .grid-item:hover .case-item-content { transform: translate3D(0, 6px, 0); }
-body.home-page .grid-item:hover .grid-item-text { transform: translate3D(0, 8px, 0); }
-body.home-page .grid-item:hover .grid-item-bg { transform: scale3D(1.04, 1.04, 1); }
+body.home-page .grid-item:hover .grid-item-header { transform: translate3D(0, -2px, 0); }
+body.home-page .grid-item:hover .grid-item-divider { transform: scaleX(0.9) translate3D(0, 1px, 0); }
+body.home-page .grid-item:hover .case-item-content { transform: translate3D(0, 2px, 0); }
+body.home-page .grid-item:hover .grid-item-text { transform: translate3D(0, 2px, 0); }
+body.home-page .grid-item:hover .grid-item-bg { transform: scale3D(1.02, 1.02, 1); }
+body.home-page #work .grid-item-header,
+body.home-page #work .case-item-content,
+body.home-page #work .grid-item-text,
+body.home-page #work .grid-item-bg { transition: none; }
+body.home-page #work .grid-item:hover .grid-item-header,
+body.home-page #work .grid-item:hover .case-item-content,
+body.home-page #work .grid-item:hover .grid-item-text,
+body.home-page #work .grid-item:hover .grid-item-bg { transform: none; }
+body.home-page #work .grid-item { transition: color 0.2s; }
+body.home-page #work .case-thumb-foreground {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.4s ease;
+    }
+body.home-page #work .grid-item:hover .case-thumb-foreground { transform: scale(1.015); }
 body.home-page .grid-item-tall { padding-top: 90px; padding-bottom: 120px; }
 body.home-page .grid-item-dark-text { color: #000; }
 body.home-page .grid-item-dark-text:hover { color: #000; }
@@ -369,7 +390,7 @@ body.home-page .grid-item-header {
       font-size: clamp(1.125rem, 6vw, 2.875rem);
       line-height: 1.3em;
       margin: 60px auto 0.65em;
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.45s ease-out;
       transform: translateZ(0);
       font-weight: 800;
       margin-left: auto;
@@ -380,6 +401,27 @@ body.home-page .grid-item-header {
       letter-spacing: -0.3px;
       overflow-wrap: anywhere;
     }
+body.home-page .grid-item-title-group {
+      position: relative;
+      z-index: 10;
+      width: min(680px, 100%);
+      margin: 60px auto 0;
+    }
+body.home-page .grid-item-subtitle {
+      display: block;
+      min-height: 1.2em;
+      text-align: center;
+      font-size: 1.26rem;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.75;
+    }
+body.home-page .grid-item-title-group .grid-item-header {
+      max-width: none;
+      margin: 4px auto 0.65em;
+    }
+body.home-page .grid-item-title-group .grid-item-header-deutsche-bank { padding-top: 0; }
 
     @media (max-width: 600px) {
 body.home-page .grid-item-header {
@@ -401,7 +443,7 @@ body.home-page .grid-item-text {
       width: 80%;
       z-index: 10;
       max-width: 500px;
-      transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: transform 0.45s ease-out;
     }/* "View case study" / "View project" button (hidden until hover) */
 body.home-page .grid-item-button {
       position: absolute;
@@ -430,7 +472,7 @@ body.home-page .grid-item:hover .grid-item-button-label { transform: translateY(
 body.home-page .case-item-content {
       margin-top: 10px;
       margin-bottom: 30px;
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.5s ease-out;
     }
 body.home-page .case-item-xing .case-item-content {
       display: flex;
@@ -444,6 +486,7 @@ body.home-page .case-item-snapseed .grid-item-text {
       text-align: center;
     }
 body.home-page .case-item-snapseed .case-item-content {
+      width: 100%;
       min-height: 120px;
       display: flex;
       align-items: center;
@@ -1485,19 +1528,20 @@ body.case-page .back-link {
 
 /* Portfolio styles previously expressed as element attributes */
 .case-item-shop-to-shop { background-color: #314964; }
-.case-item-dispute { background-color: #2b2f3c; }
-.case-item-kleinanzeigen { background-color: #7DCCAD; }
-.case-item-transactions { background-color: #3bab87; }
+.case-thumb-dark { background-color: #2b2f3c; }
+.case-thumb-mint { background-color: #7DCCAD; }
+.case-thumb-dispute { background-color: #1c323d; }
+.case-item-transactions { background-color: #7DCCAD; }
 .case-item-xing { background-color: #E5EEE4; }
-.case-item-snapseed { background-color: #1c323d; }
+.case-item-snapseed { background-color: #3bab87; }
 .case-item-typesource { background-color: #1a1a1a; }
 body.home-page .case-item-typesource { display: none; }
 .case-image-shop-to-shop { max-height: 308px; width: auto; border-radius: 8px; }
 .case-image-kleinanzeigen { max-height: 222px; width: auto; border-radius: 8px; }
 .case-image-xing { display: block; width: min(100%, 280px); height: auto; margin: 0 auto; transform: scale(1.3); }
-body.home-page .case-item-dispute .case-preview-content { display: flex; justify-content: center; margin-bottom: 30px; }
+body.home-page .case-thumb-dispute .case-preview-content { display: flex; justify-content: center; margin-bottom: 30px; }
 .case-image-drc-thumb { display: block; width: min(100%, 220px); max-height: 160px; height: auto; margin: 0 auto; object-fit: contain; transform: scale(0.8); }
-.case-image-snapseed-logo { display: block; width: 80px; height: 80px; margin: 0 auto; object-fit: contain; transform: scale(1.2); }
+.case-image-snapseed-logo { display: block; width: 80px; height: 80px; margin: 0 auto; object-fit: contain; transform: scale(1.4); }
 .case-preview-content { padding: 10px 0; }
 .ts-line-playfair { font-family: Georgia, serif; font-size: 28px; font-weight: 700; }
 .ts-line-roboto { font-family: 'Courier New', monospace; font-size: 20px; }
@@ -1514,10 +1558,10 @@ body.home-page .case-item-dispute .case-preview-content { display: flex; justify
 
 /* Case-study hero colors correspond to the portfolio thumbnails */
 .case-study-shop-to-shop { --case-accent: #314964; --case-foreground: #fff; }
-.case-study-dispute { --case-accent: #2b2f3c; --case-foreground: #fff; }
-.case-study-snapseed { --case-accent: #1c323d; --case-foreground: #fff; }
-.case-study-kleinanzeigen { --case-accent: #7DCCAD; --case-foreground: #000; }
-.case-study-transactions { --case-accent: #3bab87; --case-foreground: #000; }
+.case-study-dispute { --case-accent: #1c323d; --case-foreground: #fff; }
+.case-study-snapseed { --case-accent: #3bab87; --case-foreground: #000; }
+.case-study-kleinanzeigen { --case-accent: #2b2f3c; --case-foreground: #fff; }
+.case-study-transactions { --case-accent: #7DCCAD; --case-foreground: #000; }
 .case-study-xing { --case-accent: #E5EEE4; --case-foreground: #000; }
 .case-study-deutsche-bank { --case-accent: #d1e1e0; --case-foreground: #26555d; }
 body.case-page-moving-things .case-hero { --case-accent: #224a54; --case-foreground: #fff; }
