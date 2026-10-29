@@ -12,16 +12,16 @@
 </head>
 <body class="case-page case-page-token-scale">
   <div class="site-header site-header-post">
-    <button class="js-menu menu button-clear" aria-label="Site navigation">
+    <button class="js-menu menu button-clear" aria-label="Site navigation" aria-expanded="false" aria-controls="site-navigation">
       <span class="menu-icon-line menu-icon-line-1"></span>
       <span class="menu-icon-line menu-icon-line-2"></span>
       <span class="menu-icon-line menu-icon-line-3"></span>
     </button>
-    <h1 class="site-name site-name-post">
+    <div class="site-name site-name-post">
       <a class="siteLogoLink site-name-link-parent" href="index.html" aria-label="Home">
         <img class="site-logo-anchor" src="assets/logo-yaara-anchor.svg" alt="" aria-hidden="true">
       </a>
-    </h1>
+    </div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -42,8 +42,8 @@
               <div class="contrast-tool-control">
                 <label class="contrast-tool-label" for="contrast-color-picker">Base color</label>
                 <div class="contrast-tool-color-input">
-                  <input type="color" id="contrast-color-picker" value="#FF4457">
-                  <input type="text" id="contrast-hex-input" value="#FF4457" maxlength="7" aria-label="Base color hex value" spellcheck="false">
+                  <input type="color" id="contrast-color-picker" value="#FF4457" aria-describedby="contrast-tool-error">
+                  <input type="text" id="contrast-hex-input" value="#FF4457" maxlength="7" aria-label="Base color hex value" aria-describedby="contrast-tool-error" spellcheck="false">
                 </div>
               </div>
               <div class="contrast-tool-control">
@@ -61,7 +61,7 @@
                 <span>vs white</span>
                 <span>vs black</span>
               </div>
-              <div class="contrast-tool-scale" id="contrast-tool-scale" aria-label="Generated color scale"></div>
+              <div class="contrast-tool-scale" id="contrast-tool-scale" role="region" aria-label="Generated color scale"></div>
             </div>
             <p class="contrast-tool-hint">Click a row or focus it and press Enter to copy the token name.</p>
           </div>

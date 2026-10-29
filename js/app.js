@@ -62,14 +62,31 @@
 
   function setMenuState(isOpen, button, overlay) {
     if (!button || !overlay) return;
+    var focusWasInOverlay = overlay.contains(document.activeElement);
     var buttonBounds = button.getBoundingClientRect();
     overlay.style.setProperty('--menu-origin-x', (buttonBounds.left + buttonBounds.width / 2) + 'px');
     overlay.style.setProperty('--menu-origin-y', (buttonBounds.top + buttonBounds.height / 2) + 'px');
     void overlay.offsetWidth;
     button.classList.toggle('active', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
     overlay.classList.toggle('active', isOpen);
     overlay.setAttribute('aria-hidden', String(!isOpen));
+    overlay.inert = !isOpen;
     document.body.classList.toggle('menu-open', isOpen);
+    var header = overlay.closest('.site-header');
+    if (header) {
+      Array.prototype.forEach.call(header.children, function (child) {
+        if (child !== button && child !== overlay) child.inert = isOpen;
+      });
+    }
+    var main = document.querySelector('main');
+    if (main) main.inert = isOpen;
+    if (isOpen) {
+      var firstLink = overlay.querySelector('a[href]');
+      if (firstLink) firstLink.focus();
+    } else if (focusWasInOverlay) {
+      button.focus();
+    }
   }
 
   function bindNavOverlay(overlay) {
@@ -107,6 +124,22 @@
         var overlay = header ? header.querySelector('.site-nav-overlay, .js-nav') : null;
         setMenuState(false, button, overlay);
       });
+      return;
+    }
+
+    if (e.key !== 'Tab') return;
+    var activeOverlay = navOverlays.find(function (overlay) { return overlay.classList.contains('active'); });
+    if (!activeOverlay) return;
+    var focusable = Array.prototype.slice.call(activeOverlay.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey && (document.activeElement === first || !activeOverlay.contains(document.activeElement))) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && (document.activeElement === last || !activeOverlay.contains(document.activeElement))) {
+      e.preventDefault();
+      first.focus();
     }
   });
 

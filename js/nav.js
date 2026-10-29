@@ -1,6 +1,6 @@
 (function () {
   var sharedNav = `
-    <div class="site-nav-overlay js-nav" aria-hidden="true">
+    <nav id="site-navigation" class="site-nav-overlay js-nav" aria-label="Site navigation" aria-hidden="true" inert>
       <div class="nav-content">
         <ul class="nav-categories">
           <li class="nav-category">
@@ -25,7 +25,7 @@
           <li class="nav-category"><a href="index.html#contact" class="nav-link">A bit about me</a></li>
         </ul>
       </div>
-    </div>`;
+    </nav>`;
 
   Array.prototype.forEach.call(document.querySelectorAll('.site-nav-placeholder'), function (placeholder) {
     placeholder.insertAdjacentHTML('beforebegin', sharedNav);
