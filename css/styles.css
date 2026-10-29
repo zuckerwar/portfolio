@@ -616,6 +616,12 @@ body.home-page .motion-letter:nth-child(3) { animation-delay: 0.1s; }
 body.home-page .motion-letter:nth-child(4) { animation-delay: 0.15s; }
 body.home-page .motion-letter:nth-child(5) { animation-delay: 0.2s; }
 body.home-page .motion-letter:nth-child(6) { animation-delay: 0.25s; }
+body.home-page .motion-letter:nth-child(7) { animation-delay: 0.3s; }
+body.home-page .motion-letter:nth-child(8) { animation-delay: 0.35s; }
+body.home-page .motion-letter:nth-child(9) { animation-delay: 0.4s; }
+body.home-page .motion-letter:nth-child(10) { animation-delay: 0.45s; }
+body.home-page .motion-letter:nth-child(11) { animation-delay: 0.5s; }
+body.home-page .motion-letter:nth-child(12) { animation-delay: 0.55s; }
 
     @keyframes motion-slide {
       0%   { transform: translateY(1em); opacity: 0; }
