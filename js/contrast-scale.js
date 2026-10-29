@@ -183,7 +183,6 @@
 
       var token = document.createElement('span');
       token.className = 'contrast-tool-token';
-      token.style.color = shade.hex;
       token.textContent = tokenName;
 
       var hexValue = document.createElement('span');

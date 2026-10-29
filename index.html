@@ -16,18 +16,18 @@
   <div class="site-header site-header-portfolio">
 
     <!-- Hamburger -->
-    <button class="menu js-menu" aria-label="Site navigation" id="menuBtn">
+    <button class="menu js-menu" aria-label="Site navigation" aria-expanded="false" aria-controls="site-navigation" id="menuBtn">
       <span class="menu-icon-line menu-icon-line-1"></span>
       <span class="menu-icon-line menu-icon-line-2"></span>
       <span class="menu-icon-line menu-icon-line-3"></span>
     </button>
 
     <!-- Centered logo -->
-    <h1 class="site-name site-name-portfolio">
+    <div class="site-name site-name-portfolio">
       <a class="siteLogoLink" href="index.html" aria-label="Home">
         <img class="site-logo-anchor" src="assets/logo-yaara-anchor.svg" alt="" aria-hidden="true">
       </a>
-    </h1>
+    </div>
 
     <!-- Theme toggle -->
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
@@ -66,7 +66,7 @@
       <div class="case-thumb-foreground">
         <div class="grid-item-title-group">
           <span class="grid-item-subtitle">Kleinanzeigen</span>
-          <h1 class="grid-item-header">Shop-to-Shop Shipping</h1>
+          <h3 class="grid-item-header">Shop-to-Shop Shipping</h3>
         </div>
         <div class="case-item-content">
           <img class="case-image-shop-to-shop" src="assets/pudo-thumb.png" alt="Shop-to-Shop Shipping">
@@ -80,7 +80,7 @@
       <div class="case-thumb-foreground">
         <div class="grid-item-title-group">
           <span class="grid-item-subtitle">Kleinanzeigen</span>
-          <h1 class="grid-item-header">Design System</h1>
+          <h3 class="grid-item-header">Design System</h3>
         </div>
         <div class="case-item-content">
           <img class="case-image-kleinanzeigen" src="assets/ka-design-system-thumb.png" alt="Kleinanzeigen Design System">
@@ -94,7 +94,7 @@
       <div class="case-thumb-foreground">
         <div class="grid-item-title-group">
           <span class="grid-item-subtitle">Google</span>
-          <h1 class="grid-item-header">Snapseed</h1>
+          <h3 class="grid-item-header">Snapseed</h3>
         </div>
         <div class="case-item-content">
           <img class="case-image-snapseed-logo" src="assets/snapseed-logo.png" alt="Snapseed logo">
@@ -108,7 +108,7 @@
       <div class="case-thumb-foreground">
         <div class="grid-item-title-group">
           <span class="grid-item-subtitle">Kleinanzeigen</span>
-          <h1 class="grid-item-header">Resolving Disputes at Scale</h1>
+          <h3 class="grid-item-header">Resolving Disputes at Scale</h3>
         </div>
         <div class="case-item-content case-preview-content">
           <img class="case-image-drc-thumb" src="assets/drc-thumb.svg" alt="Dispute Resolution Center interface">
@@ -122,7 +122,7 @@
       <div class="case-thumb-foreground">
         <div class="grid-item-title-group">
           <span class="grid-item-subtitle">Kleinanzeigen</span>
-          <h1 class="grid-item-header">Transactions Overview</h1>
+          <h3 class="grid-item-header">Transactions Overview</h3>
         </div>
         <div class="case-item-content">
           <img src="assets/IconTransactionsOverview.svg" alt="Transactions Overview icon" width="64" height="64">
@@ -136,7 +136,7 @@
       <div class="case-thumb-foreground">
         <div class="grid-item-title-group">
           <span class="grid-item-subtitle">XING</span>
-          <h1 class="grid-item-header">Design System</h1>
+          <h3 class="grid-item-header">Design System</h3>
         </div>
         <div class="case-item-content">
           <img class="case-image-xing" src="assets/xing-ds-thumb.png" alt="XING Design System interface elements">
@@ -180,21 +180,7 @@
       <h3 class="grid-item-header motion-demo" aria-label="Moving things"><span class="motion-letter" aria-hidden="true">M</span><span class="motion-letter" aria-hidden="true">o</span><span class="motion-letter" aria-hidden="true">v</span><span class="motion-letter" aria-hidden="true">i</span><span class="motion-letter" aria-hidden="true">n</span><span class="motion-letter" aria-hidden="true">g</span> <span class="motion-letter" aria-hidden="true">t</span><span class="motion-letter" aria-hidden="true">h</span><span class="motion-letter" aria-hidden="true">i</span><span class="motion-letter" aria-hidden="true">n</span><span class="motion-letter" aria-hidden="true">g</span><span class="motion-letter" aria-hidden="true">s</span></h3>
       <p class="grid-item-text">My past as an animator</p>
     </a>
-
-    <!-- TypeSource -->
-    <a href="typesource.html" class="grid-item grid-item-tall case-item-typesource">
-      <span class="grid-item-button"><span class="grid-item-button-label">View project</span></span>
-      <h3 class="grid-item-header grid-item-header-typesource">TypeSource</h3>
-      <div class="case-item-content">
-        <div class="ts-preview">
-          <span class="ts-line ts-line-playfair">Playfair</span>
-          <span class="ts-line ts-line-roboto">Roboto Mono</span>
-          <span class="ts-line ts-line-compact">Inter · DM Sans · Lato</span>
-        </div>
-      </div>
-      <p class="grid-item-text">I created <strong>TypeSource</strong> as a way to browse web fonts by how they look and feel, rather by their name and attributes.</p>
-    </a>
-  </div>
+</div>
 
   <!-- ── Contact ────────────────────────────────────────── -->
   <div class="section contact-card" id="contact">
