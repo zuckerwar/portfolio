@@ -4,13 +4,13 @@
       <div class="nav-content">
         <ul class="nav-categories">
           <li class="nav-category">
-            <a href="index.html#work" class="nav-link">Work</a>
+            <a href="index.html#work" class="nav-link">Portfolio</a>
             <div class="nav-sublinks">
-              <a class="nav-link nav-sublink" href="shop-to-shop.html">Shop-to-Shop Shipping</a>
+              <a class="nav-link nav-sublink" href="shop-to-shop.html">Kleinanzeigen Shop-to-Shop Shipping</a>
               <a class="nav-link nav-sublink" href="ka-design-system.html">Kleinanzeigen Design System</a>
               <a class="nav-link nav-sublink" href="google-snapseed.html">Google Snapseed</a>
-              <a class="nav-link nav-sublink" href="cs-and-dispute.html">Dispute and Dispute Resolution Center</a>
-              <a class="nav-link nav-sublink" href="transactions-overview.html">Transactions Overview</a>
+              <a class="nav-link nav-sublink" href="cs-and-dispute.html">Kleinanzeigen Resolving Disputes at Scale</a>
+              <a class="nav-link nav-sublink" href="transactions-overview.html">Kleinanzeigen Transactions Overview</a>
               <a class="nav-link nav-sublink" href="xing-design-system.html">XING Design System</a>
               <a class="nav-link nav-sublink" href="deutsche-bank-advisors-platform.html">Deutsche Bank Advisors Platform</a>
             </div>
