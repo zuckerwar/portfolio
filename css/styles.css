@@ -343,25 +343,6 @@ body.home-page .grid-item:hover .grid-item-divider { transform: scaleX(0.9) tran
 body.home-page .grid-item:hover .case-item-content { transform: translate3D(0, 2px, 0); }
 body.home-page .grid-item:hover .grid-item-text { transform: translate3D(0, 2px, 0); }
 body.home-page .grid-item:hover .grid-item-bg { transform: scale3D(1.02, 1.02, 1); }
-body.home-page #work .grid-item-header,
-body.home-page #work .case-item-content,
-body.home-page #work .grid-item-text,
-body.home-page #work .grid-item-bg { transition: none; }
-body.home-page #work .grid-item:hover .grid-item-header,
-body.home-page #work .grid-item:hover .case-item-content,
-body.home-page #work .grid-item:hover .grid-item-text,
-body.home-page #work .grid-item:hover .grid-item-bg { transform: none; }
-body.home-page #work .grid-item { transition: color 0.2s; }
-body.home-page #work .case-thumb-foreground {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.4s ease;
-    }
-body.home-page #work .grid-item:hover .case-thumb-foreground { transform: scale(1.015); }
 body.home-page .grid-item-tall { padding-top: 90px; padding-bottom: 120px; }
 body.home-page .grid-item-dark-text { color: #000; }
 body.home-page .grid-item-dark-text:hover { color: #000; }
